@@ -1,0 +1,2 @@
+require 'paste'
+run Paste

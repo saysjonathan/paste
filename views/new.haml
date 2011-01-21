@@ -1,0 +1,39 @@
+.snippet
+  %h1 Paste a new code snippet below:
+  %form{:action => "/", :method => "POST"}
+    %p
+      %label{:for => "name"} Title: 
+      %input{:type => "text", :name => "snippet_title"}
+      %select{:name => "snippet_lexer"}
+        %option{:value => "ada"} Ada
+        %option{:value => "apache"} Apache
+        %option{:value => "applescript"} AppleScript
+        %option{:value => "bash"} Bash
+        %option{:value => "boo"} Boo
+        %option{:value => "brainfuck"} Brainfuck
+        %option{:value => "c"} C
+        %option{:value => "clojure"} Clojure
+        %option{:value => "cmake"} CMake
+        %option{:value => "coffee-script"} CoffeeScript
+        %option{:value => "common-lisp"} Common Lisp
+        %option{:value => "erb"} ERB
+        %option{:value => "erl"} Erlang
+        %option{:value => "go"} Go
+        %option{:value => "haml"} HAML
+        %option{:value => "haskell"} Haskell
+        %option{:value => "html"} HTML
+        %option{:value => "io"} Io
+        %option{:value => "js"} JavaScript
+        %option{:value => "lighttpd"} Lighttpd
+        %option{:value => "perl"} Perl
+        %option{:value => "php"} PHP
+        %option{:value => "prolog"} Prolog
+        %option{:value => "python"} Python
+        %option{:value => "python3"} Python3
+        %option{:value => "ruby"} Ruby
+        %option{:value => "text", :selected => 'Text'} Text
+        %option{:value => "vim"} VimL
+        %option{:value => "xml"} XML
+        %option{:value => "yaml"} YAML
+    %textarea{:name => "snippet_body", :id => "snippet_body", :rows => "20"}
+    %input{:type => "submit", :value => "Save"}
