@@ -7,6 +7,7 @@ require 'sinatra/redis'
 class Paste < Sinatra::Base
   helpers Sinatra::Pygments
   register Sinatra::Redis
+  set :redis, 'redis://127.0.0.1:6379/1'
 
   #new
   get '/' do
